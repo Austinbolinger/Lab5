@@ -4,7 +4,7 @@ Lab5
 #Design
 When tested, my program did match the program given below.
 
-![Program 1](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/program1.JPG?raw=true "Program 1")
+![Program 1](https://github.com/Austinbolinger/Lab5/blob/master/program1.JPG?raw=true "Program 1")
 
 A step by step is as follows:
 1) Loads value 8 into the accumulator
