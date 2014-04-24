@@ -21,7 +21,7 @@ This just loads the input and than repeatedly adds one to the number and starts 
 
 
 This is the code used to program the FPGA
-https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/pinout.ucf
+https://github.com/Austinbolinger/Lab5/blob/master/pinout.ucf
 
 ####Data Checked
 
