@@ -29,7 +29,7 @@ This is the code used to program the FPGA
 https://github.com/Austinbolinger/Lab5/blob/master/pinout.ucf
 
 ####Data Checked
-
+24 APR 14 - Part 1 checked in class: full functionality
 
 #####Documentation
 C3C Pluger helped me understand how fetch and the others work based on the state diagram from the lab handout.
