@@ -13,28 +13,11 @@ A step by step is as follows:
 4) Now, if the value in the accumulator is negative, the next step is to jump back up to the add 1 protion in step 2
 5) Otherwise, the program jumps to the jump locator which is pointing at its own self and just stays at the value it is currently.
 
-BIG picture
-and WHY though
+This just loads the input and than repeatedly adds one to the number and starts back over at 0 when it passes F. This just cycles through the memory.
 
 ![instructions from 000-100ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions0-100ns.JPG?raw=true "instructions from 000-100ns")
 
 ![instructions from 100-200ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions100-200ns.JPG?raw=true "instructions from 100-200ns")
-
-![instructions from 200-300ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions200-300ns.JPG?raw=true "instructions from 200-300ns")
-
-![instructions from 300-400ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions300-400ns.JPG?raw=true "instructions from 300-400ns")
-
-![instructions from 400-500ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions400-500ns.JPG?raw=true "instructions from 400-500ns")
-
-![instructions from 500-600ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions500-600ns.JPG?raw=true "instructions from 500-600ns")
-
-![instructions from 600-700ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions600-700ns.JPG?raw=true "instructions from 600-700ns")
-
-![instructions from 700-800ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions700-800ns.JPG?raw=true "instructions from 700-800ns")
-
-![instructions from 800-900ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions800-900ns.JPG?raw=true "instructions from 800-900ns")
-
-![instructions from 900-100ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions900-1000ns.JPG?raw=true "instructions from 900-100ns")
 
 
 This is the code used to program the FPGA
