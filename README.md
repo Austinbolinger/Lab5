@@ -11,7 +11,8 @@ A step by step is as follows:
 2) Adds 1 to 8
 3) Outputs the answer to port 3
 4) Now, if the value in the accumulator is negative, the next step is to jump back up to the add 1 protion in step 2
-5) Otherwise, the program jumps to the jump locator which is pointing at its own self and just stays at the value it is at
+5) Otherwise, the program jumps to the jump locator which is pointing at its own self and just stays at the value it is currently.
+
 BIG picture
 and WHY though
 
@@ -35,6 +36,9 @@ and WHY though
 
 ![instructions from 900-100ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions900-1000ns.JPG?raw=true "instructions from 900-100ns")
 
+
+This is the code used to program the FPGA
+https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/pinout.ucf
 
 ####Data Checked
 
