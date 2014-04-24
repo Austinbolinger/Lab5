@@ -15,9 +15,9 @@ A step by step is as follows:
 
 This just loads the input and than repeatedly adds one to the number and starts back over at 0 when it passes F. This just cycles through the memory.
 
-![instructions from 000-100ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions0-100ns.JPG?raw=true "instructions from 000-100ns")
+![instructions from 000-100ns](https://github.com/Austinbolinger/Lab5/blob/master/instructions0-100ns.JPG?raw=true "instructions from 000-100ns")
 
-![instructions from 100-200ns](https://github.com/Austinbolinger/Lab5_Bolinger/blob/master/instructions100-200ns.JPG?raw=true "instructions from 100-200ns")
+![instructions from 100-200ns](https://github.com/Austinbolinger/Lab5/blob/master/instructions100-200ns.JPG?raw=true "instructions from 100-200ns")
 
 
 This is the code used to program the FPGA
