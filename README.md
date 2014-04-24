@@ -7,6 +7,7 @@ When tested, my program did match the program given below.
 ![Program 1](https://github.com/Austinbolinger/Lab5/blob/master/program1.JPG?raw=true "Program 1")
 
 A step by step is as follows:
+
 1) Loads value 8 into the accumulator
 
 2) Adds 1 to 8
@@ -31,4 +32,4 @@ https://github.com/Austinbolinger/Lab5/blob/master/pinout.ucf
 
 
 #####Documentation
-
+C3C Pluger helped me understand how fetch and the others work based on the state diagram from the lab handout.
