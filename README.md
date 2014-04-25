@@ -37,11 +37,17 @@ This just loads the input and than repeatedly adds one to the number and starts 
 5. What changes are necessary to the PRISM datapath to add another instruction (SUBI, which would subtract an immediate value from the accumulator) to the instruction set?
 
 
-This is the code used to program the FPGA
+This is the code used to program the FPGA for part 1
 https://github.com/Austinbolinger/Lab5/blob/master/part1.bit
+
+This is the code used to program the FPGA for part 2
+https://github.com/Austinbolinger/Lab5/blob/master/part2.bit
+Here is the code for the PRISM program
+https://github.com/Austinbolinger/Lab5/blob/master/part2.b.psm
 
 ####Data Checked
 24 APR 14 - Part 1 checked in class: full functionality
+25 APR 14 - Part 2 checked : full functionality
 
 #####Documentation
 C3C Pluger helped me understand how fetch and the others work based on the state diagram from the lab handout.
