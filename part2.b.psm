@@ -1,0 +1,256 @@
+	start	   00	   5	IN	0		N	1	N
+		   01	   0				Y	0	N
+		   02	   B	JN	decr1	if greater than or equal to 8 go decr1	N	2	N
+		   03	   5				Y	0	N
+		   04	   4				Y	0	N
+		   05	   9	JMP	incr1	if less than to 8 incr1	N	2	N
+		   06	   8				Y	0	N
+		   07	   0				Y	0	N
+	incr1	   08	   F	LDAD	ones	load one	N	2	Y
+		   09	   1				Y	0	N
+		   0A	   B				Y	0	N
+		   0B	   6	ADDI	7	add 7	N	1	Y
+		   0C	   7				Y	0	N
+		   0D	   A	JZ	setOnes	check to see if it maxed at 10	N	2	Y
+		   0E	   A				Y	0	N
+		   0F	   1				Y	0	N
+		   10	   6	ADDI	A	subtract 10	N	1	Y
+		   11	   A				Y	0	N
+		   12	   4	OUT	2	out put ++ to port 2 for ones	N	1	Y
+		   13	   2				Y	0	N
+		   14	   D	STA	ones	save output	N	2	N
+		   15	   1				Y	0	N
+		   16	   B				Y	0	N
+		   17	   9	JMP	start	continue to incr if it passed the zeroed test	N	2	Y
+		   18	   0				Y	0	N
+		   19	   0				Y	0	N
+	setOnes	   1A	   D	STA	ones	set ones to zero	N	2	Y
+		   1B	   1				Y	0	N
+		   1C	   B				Y	0	N
+		   1D	   F	LDAD	ones	load the zero	N	2	N
+		   1E	   1				Y	0	N
+		   1F	   B				Y	0	N
+		   20	   4	OUT	2	output to port 2 for ones	N	1	N
+		   21	   2				Y	0	N
+		   22	   F	LDAD	tens	load tens value	N	2	Y
+		   23	   2				Y	0	N
+		   24	   B				Y	0	N
+		   25	   6	ADDI	7	add 7	N	1	Y
+		   26	   7				Y	0	N
+		   27	   A	JZ	setTens	check to see if tens maxed at 10	N	2	Y
+		   28	   4				Y	0	N
+		   29	   3				Y	0	N
+		   2A	   6	ADDI	A	subtract 10	N	1	Y
+		   2B	   A				Y	0	N
+		   2C	   4	OUT	1	out put ++ to port 1 for tens	N	1	Y
+		   2D	   1				Y	0	N
+		   2E	   D	STA	tens	save output	N	2	N
+		   2F	   2				Y	0	N
+		   30	   B				Y	0	N
+		   31	   9	JMP	start	jump back to incr 1 to incr ones	N	2	Y
+		   32	   0				Y	0	N
+		   33	   0				Y	0	N
+	setTens	   34	   D	STA	tens	set tens value to zero	N	2	Y
+		   35	   2				Y	0	N
+		   36	   B				Y	0	N
+		   37	   D	STA	ones	set ones to zero also	N	2	Y
+		   38	   1				Y	0	N
+		   39	   B				Y	0	N
+		   3A	   F	LDAD	tens	load a zero	N	2	N
+		   3B	   2				Y	0	N
+		   3C	   B				Y	0	N
+		   3D	   4	OUT	1	output to port 1 for tens	N	1	Y
+		   3E	   1				Y	0	N
+		   3F	   4	OUT	2	output to port 2 for ones	N	1	Y
+		   40	   2				Y	0	N
+		   41	   9	JMP	start		N	2	Y
+		   42	   0				Y	0	N
+		   43	   0				Y	0	N
+		   44	   0	NOP		Now the subtract part	N	0	Y
+	decr1	   45	   F	LDAD	ones		N	2	Y
+		   46	   1				Y	0	N
+		   47	   B				Y	0	N
+		   48	   6	ADDI	F	subtract 1	N	1	Y
+		   49	   F				Y	0	N
+		   4A	   A	JZ	setOnesdecr	check to see if it min-ed at 0	N	2	Y
+		   4B	   5				Y	0	N
+		   4C	   5				Y	0	N
+		   4D	   4	OUT	2		N	1	Y
+		   4E	   2				Y	0	N
+		   4F	   D	STA	ones	save output for ones	N	2	N
+		   50	   1				Y	0	N
+		   51	   B				Y	0	N
+		   52	   9	JMP	start	continue to incr if it passed the zeroed test	N	2	Y
+		   53	   0				Y	0	N
+		   54	   0				Y	0	N
+	setOnesdecr	   55	   4	OUT	2		N	1	N
+		   56	   2				Y	0	N
+		   57	   6	ADDI	9	put ones to 9	N	1	N
+		   58	   9				Y	0	N
+		   59	   D	STA	ones	set ones to 9	N	2	Y
+		   5A	   1				Y	0	N
+		   5B	   B				Y	0	N
+		   5C	   F	LDAD	ones	load the 9	N	2	N
+		   5D	   1				Y	0	N
+		   5E	   B				Y	0	N
+		   5F	   4	OUT	2	output to port 2 for ones	N	1	N
+		   60	   2				Y	0	N
+		   61	   F	LDAD	tens	load tens value	N	2	Y
+		   62	   2				Y	0	N
+		   63	   B				Y	0	N
+		   64	   6	ADDI	F	subtract 1	N	1	Y
+		   65	   F				Y	0	N
+		   66	   A	JZ	setTensdecr	check to see if tens min-ed at 0	N	2	Y
+		   67	   1				Y	0	N
+		   68	   7				Y	0	N
+		   69	   4	OUT	1	out put ++ to port 1 for tens	N	1	Y
+		   6A	   1				Y	0	N
+		   6B	   D	STA	tens	save output	N	2	N
+		   6C	   2				Y	0	N
+		   6D	   B				Y	0	N
+		   6E	   9	JMP	start	jump back to incr 1 to decr ones	N	2	Y
+		   6F	   0				Y	0	N
+		   70	   0				Y	0	N
+	setTensdecr	   71	   4	OUT	1		N	1	N
+		   72	   1				Y	0	N
+		   73	   6	ADDI	9	put ones to 9	N	1	N
+		   74	   9				Y	0	N
+		   75	   D	STA	tens	saves tens value to 9	N	2	Y
+		   76	   2				Y	0	N
+		   77	   B				Y	0	N
+		   78	   D	STA	ones	saves ones to 9, also	N	2	Y
+		   79	   1				Y	0	N
+		   7A	   B				Y	0	N
+		   7B	   F	LDAD	tens	load a 9	N	2	N
+		   7C	   2				Y	0	N
+		   7D	   B				Y	0	N
+		   7E	   4	OUT	1	output to port 1 for tens	N	1	Y
+		   7F	   1				Y	0	N
+		   80	   4	OUT	2	output to port 2 for ones	N	1	Y
+		   81	   2				Y	0	N
+		   82	   9	JMP	start		N	2	Y
+		   83	   0				Y	0	N
+		   84	   0				Y	0	N
+		   85	   0	NOP			N	0	Y
+		   86	   0	NOP			N	0	Y
+		   87	   0	NOP			N	0	Y
+		   88	   0	NOP			N	0	Y
+		   89	   0	NOP			N	0	Y
+		   8A	   0	NOP			N	0	Y
+		   8B	   0	NOP			N	0	Y
+		   8C	   0	NOP			N	0	Y
+		   8D	   0	NOP			N	0	Y
+		   8E	   0	NOP			N	0	Y
+		   8F	   0	NOP			N	0	Y
+		   90	   0	NOP			N	0	Y
+		   91	   0	NOP			N	0	Y
+		   92	   0	NOP			N	0	Y
+		   93	   0	NOP			N	0	Y
+		   94	   0	NOP			N	0	Y
+		   95	   0	NOP			N	0	Y
+		   96	   0	NOP			N	0	Y
+		   97	   0	NOP			N	0	Y
+		   98	   0	NOP			N	0	Y
+		   99	   0	NOP			N	0	Y
+		   9A	   0	NOP			N	0	Y
+		   9B	   0	NOP			N	0	Y
+		   9C	   0	NOP			N	0	Y
+		   9D	   0	NOP			N	0	Y
+		   9E	   0	NOP			N	0	Y
+		   9F	   0	NOP			N	0	Y
+		   A0	   0	NOP			N	0	Y
+		   A1	   0	NOP			N	0	Y
+		   A2	   0	NOP			N	0	Y
+		   A3	   0	NOP			N	0	Y
+		   A4	   0	NOP			N	0	Y
+		   A5	   0	NOP			N	0	Y
+		   A6	   0	NOP			N	0	Y
+		   A7	   0	NOP			N	0	Y
+		   A8	   0	NOP			N	0	Y
+		   A9	   0	NOP			N	0	Y
+		   AA	   0	NOP			N	0	Y
+		   AB	   0	NOP			N	0	Y
+		   AC	   0	NOP			N	0	Y
+		   AD	   0	NOP			N	0	Y
+		   AE	   0	NOP			N	0	Y
+		   AF	   0	NOP			N	0	Y
+		   B0	   0	
+	ones	   B1	   0	
+	tens	   B2	   0	
+		   B3	   0	
+		   B4	   0	
+		   B5	   0	
+		   B6	   0	
+		   B7	   0	
+		   B8	   0	
+		   B9	   0	
+		   BA	   0	
+		   BB	   0	
+		   BC	   0	
+		   BD	   0	
+		   BE	   0	
+		   BF	   0	
+		   C0	   0	
+		   C1	   0	
+		   C2	   0	
+		   C3	   0	
+		   C4	   0	
+		   C5	   0	
+		   C6	   0	
+		   C7	   0	
+		   C8	   0	
+		   C9	   0	
+		   CA	   0	
+		   CB	   0	
+		   CC	   0	
+		   CD	   0	
+		   CE	   0	
+		   CF	   0	
+		   D0	   0	
+		   D1	   0	
+		   D2	   0	
+		   D3	   0	
+		   D4	   0	
+		   D5	   0	
+		   D6	   0	
+		   D7	   0	
+		   D8	   0	
+		   D9	   0	
+		   DA	   0	
+		   DB	   0	
+		   DC	   0	
+		   DD	   0	
+		   DE	   0	
+		   DF	   0	
+		   E0	   0	
+		   E1	   0	
+		   E2	   0	
+		   E3	   0	
+		   E4	   0	
+		   E5	   0	
+		   E6	   0	
+		   E7	   0	
+		   E8	   0	
+		   E9	   0	
+		   EA	   0	
+		   EB	   0	
+		   EC	   0	
+		   ED	   0	
+		   EE	   0	
+		   EF	   0	
+		   F0	   0	
+		   F1	   0	
+		   F2	   0	
+		   F3	   0	
+		   F4	   0	
+		   F5	   0	
+		   F6	   0	
+		   F7	   0	
+		   F8	   0	
+		   F9	   0	
+		   FA	   0	
+		   FB	   0	
+		   FC	   0	
+		   FD	   0	
+		   FE	   0	
+		   FF	   0	
