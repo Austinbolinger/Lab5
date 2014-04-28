@@ -26,22 +26,22 @@ This just loads the input and than repeatedly adds one to the number and starts 
 
 
 ##Questions
-1. When the controller's current state is "FETCH," what is the status of the following control lines: a) PCLd - 1  b) IRLd - 1  c) ACCLd 0 
+1) When the controller's current state is "FETCH," what is the status of the following control lines: a) PCLd - 1  b) IRLd - 1  c) ACCLd 0 
 
-2. The current state is LoAddr and the IR contains “OUT.”  What are the control signals are asserted, and what will the next state be?
+2) The current state is LoAddr and the IR contains “OUT.”  What are the control signals are asserted, and what will the next state be?
  
 MarLoLd, MemSel, R/W, and PCLd are asserted while the next state is Direct IO Execute.
 
-3. What are the three status signals sent from the PRISM datapath to the PRISM controller?
+3) What are the three status signals sent from the PRISM datapath to the PRISM controller?
 
 IR, MarHi, and MarLo
 
-4. Why is it important that ACCLd signal be active during the execute state for the ADDI instruction?
+4) Why is it important that ACCLd signal be active during the execute state for the ADDI instruction?
 
 So that the Accumulator can be loaded and the add function can use it. Otherwise it **will not change**
 what is on the accumulator and the add function will have been useless. 
 
-5. What changes are necessary to the PRISM datapath to add another instruction (SUBI, which would subtract an immediate value from the accumulator) to the instruction set?
+5) What changes are necessary to the PRISM datapath to add another instruction (SUBI, which would subtract an immediate value from the accumulator) to the instruction set?
  
 You would have to change the number of bits in the OpSel so that it could handle more than 8 options, or you could make some changes to the add funtion. If you added some sort of flip flop mux to the that function with a SubiLd you could choose to add normal or add the opposite of what you would subtract. For example, if you wanted to subtract one, you could add F. 
 
