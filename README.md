@@ -26,7 +26,7 @@ This just loads the input and than repeatedly adds one to the number and starts 
 
 
 ##Questions
-1. When the controller's current state is "FETCH," what is the status of the following control lines: a) PCLd - 1. b) IRLd - 1. c) ACCLd 0.
+1. When the controller's current state is "FETCH," what is the status of the following control lines: a) PCLd - 1  b) IRLd - 1  c) ACCLd 0 
 
 2. The current state is LoAddr and the IR contains “OUT.”  What are the control signals are asserted, and what will the next state be?
  
@@ -34,7 +34,7 @@ MarLoLd, MemSel, R/W, and PCLd are asserted while the next state is Direct IO Ex
 
 3. What are the three status signals sent from the PRISM datapath to the PRISM controller?
 
-IR, Add, Data
+IR, MarHi, and MarLo
 
 4. Why is it important that ACCLd signal be active during the execute state for the ADDI instruction?
 
@@ -61,3 +61,4 @@ https://github.com/Austinbolinger/Lab5/blob/master/part2.b.psm
 
 #####Documentation
 C3C Pluger helped me understand how fetch and the others work based on the state diagram from the lab handout.
+He also helped me find the answer to number 3. 
