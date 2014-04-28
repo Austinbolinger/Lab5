@@ -52,7 +52,6 @@ This is the code used to program the FPGA for part 2
 https://github.com/Austinbolinger/Lab5/blob/master/part2.bit
 
 Here is the code for the PRISM program
-
 https://github.com/Austinbolinger/Lab5/blob/master/part2.b.psm
 
 ####Data Checked
