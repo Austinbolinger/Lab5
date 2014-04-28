@@ -35,7 +35,7 @@ MarLoLd, MemSel, R/W, and PCLd are asserted while the next state is Direct IO Ex
 IR, Add, Data
 
 4. Why is it important that ACCLd signal be active during the execute state for the ADDI instruction?
-So that the Accumulator can be loaded and the add function can use it. Otherwise it ######will ######not ######change
+So that the Accumulator can be loaded and the add function can use it. Otherwise it **will not change**
 what is on the accumulator and the add function will have been useless. 
 
 5. What changes are necessary to the PRISM datapath to add another instruction (SUBI, which would subtract an immediate value from the accumulator) to the instruction set?
